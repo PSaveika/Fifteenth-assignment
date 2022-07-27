@@ -1,0 +1,107 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    background: $background-secondary;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 0;
+
+    h3 {
+        font-size: 2.5em;
+        color: $text-primary;
+        margin-bottom: 4rem ;
+    }
+
+    .card-wrap {
+        
+
+        .card {
+            margin-bottom: 4rem;
+    
+            img {
+                width: 250px;
+                border-radius: 50%;
+                box-shadow: 0 .4rem .5rem #afb7be;
+                margin-bottom: 1.2rem;
+                transition: .5s;
+            }
+    
+            h4 {
+                color: $text-primary;
+                font-size: 1.5em;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: $text-secondary;
+                font-size: 1.3em;
+                font-weight: 300;
+                line-height: 1.6em;
+                padding: 0 1rem;
+            }
+        }
+
+        .card:hover img {
+            transform: translateY(-2rem);
+            box-shadow: 0 2rem 1.5rem #afb7be;
+        }
+    } 
+}
+
+@media (min-width: 61rem) {
+
+    .testimonials {
+    
+        h3 {
+            font-size: 2.5em;
+            color: $text-primary;
+            margin-bottom:4rem ;
+        }
+
+        .card-wrap {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            .card {
+                margin-bottom: 0;
+                flex-basis: 25%;
+            }
+        }
+    }
+}
+
+
+
+
+
+.testimonials-slideCenter{
+    opacity: 0;
+    animation: tSlideCenter 1.5s ease forwards;
+}
+
+@keyframes tSlideCenter {
+    0% {
+        transform: translateY(25vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonials-appear{
+    opacity: 0;
+    animation: tAppear 1.5s ease forwards;
+}
+
+@keyframes tAppear {
+    0% {
+        opacity: 0;
+        transform: scale(.5)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}

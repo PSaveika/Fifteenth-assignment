@@ -1,0 +1,125 @@
+.header-wrap {
+    overflow: hidden;
+
+    header {
+        display: flex;
+        position: relative;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h1 {
+            position: relative;
+            color: #ffffff;
+            text-align: center; 
+            margin: 0 1rem;
+        }
+    
+        form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 5rem 1rem 0 1rem;
+    
+            input {
+                height: 3.5rem;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: .7rem;
+                font-size: 1.4em;
+            }
+    
+            input:first-child {
+                background: $background-primary;
+                color: $text-secondary;
+                padding-left: 1.2rem;
+                transition: .3s;
+            }
+    
+            input:first-child:focus {
+                box-shadow: 0 0 10px $primary-color;
+            }
+    
+            input:last-child{
+                background: $primary-color;
+                color: #ffffff; 
+                transition: .3s;
+            }
+    
+            input:last-child:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px $primary-color;
+            }
+        }
+    }
+    
+    header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../img/bg-masthead.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        filter: brightness(0.7);
+    }
+
+}
+
+
+
+@media (min-width: 61rem) {
+
+    header {
+
+        .clear-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 55%;
+
+            h1 {
+                font-size: 4em;
+            }
+    
+            form {
+                flex-direction: row;
+                width: 70%;
+                gap: 1rem;
+    
+                input:first-child {
+                    flex: 70%;
+                    transition: .3s;
+                }
+    
+                input:last-child{
+                    flex: 30%;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+
+
+
+.header-appear {
+    animation: header-appear 1.5s ease forwards;
+}
+
+@keyframes header-appear {
+    
+    0% {
+        opacity: 0;
+        transform: scale(1.5)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

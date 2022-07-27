@@ -1,0 +1,53 @@
+.top-nav {
+    display: flex;
+    position: fixed;
+    background: $background-secondary;
+    height: 70px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;  
+
+    .btn-main {
+        background: transparent;
+        color: $text-primary;
+        border: none;
+        font-size: 1.7em;
+    }
+
+    .btn-signin {
+        background: $primary-color;
+        color: #ffffff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 5px;
+        font-size: 1.3em;
+    }
+
+    .btn-main:hover,
+    .btn-signin:hover {
+        cursor: pointer;
+    }
+    .btn-signin:hover {
+        animation: scale .2s linear forwards;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        box-shadow: none
+    }
+    25% {
+        transform: scale(1.2);
+        box-shadow: 0 0 5px $primary-color;
+    }
+    75% {
+        transform: scale(.9);
+        box-shadow: 0 0 5px $primary-color;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px $primary-color;
+    }
+}
