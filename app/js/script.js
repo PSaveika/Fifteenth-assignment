@@ -52,11 +52,6 @@ function changeTab(event, name){
     }
     document.getElementById(name).style.display = "block";
 
-    //style clicked button
-    for(var x of buttons) {
-        x.classList.remove("selected");
-    }
-    event.currentTarget.classList.add("selected");
 
 }
 
