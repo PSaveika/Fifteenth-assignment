@@ -1,12 +1,4 @@
-// @import "variables.scss";
 @import "reset.scss";
-// @import "navbar.scss";
-// @import "header.scss";
-// @import "features.scss";
-// @import "showcase.scss";
-// @import "testimonials.scss";
-// @import "newsletter.scss";
-// @import "footer.scss";
 
 h1 {
     text-align: center;
@@ -72,20 +64,17 @@ h1 {
                 inset 4px 4px 10px rgba(0, 0, 0, 0.5),
                 inset -4px -4px 10px rgba(67, 67, 67, 0.3),
                 4px 4px 10px rgba(0, 0, 0, 0.3);
-                overflow: hidden;
+    overflow: hidden;
     
     .tab-wrap {
-        
         height: 100%;
-        
-        z-index: 2;
         position: relative;
         
-
         .before {
             width: 0%;
             background: gold;
         }
+
         .before::before {
             content: "";
             position: absolute;
@@ -100,56 +89,55 @@ h1 {
             gap: 20px;
             animation: fromLeft 2s ease .9s forwards;
             transform: translateX(-110%);
-        }
 
-        @keyframes fromTop {
+            .left {
+                width: 100%;
 
-            0% {
-                transform: translateY(-100%);
+                p {
+                    height: 85%;
+                    line-height: 30px;
+                    text-align: justify;
+                    margin: auto;
+                    margin-bottom: 30px;
+                }
             }
-
-            100% {
-                transform: translateY(110%);
+    
+            img {
+                width: 100%;
+                align-self: center;
             }
-            
-        }
+        } 
+    }
+    
+}
 
-        @keyframes fromLeft {
 
-            0% {
-                transform: translateX(-100%);
-            }
+@keyframes fromTop {
 
-            100% {
-                transform: translateX(0%);
-            }
-            
-        }
+    0% {
+        transform: translateY(-100%);
+    }
 
-        .left {
-            width: 100%;
-        }
+    100% {
+        transform: translateY(110%);
+    }
+    
+}
 
-        img {
-            // max-width: auto;
-            width: 100%;
-            align-self: center;
-        }
+@keyframes fromLeft {
 
-        
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
     
 }
 
 
 
-.tab p {
-    height: 85%;
-    line-height: 30px;
-    text-align: justify;
-    margin: auto;
-    margin-bottom: 30px;
-}
 
 
 
